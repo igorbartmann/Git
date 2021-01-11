@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+body{
+    background-color: #e7bc4452;
+}
+
 header{
     color: #f58300;
     background-color: #ff9d003a;
