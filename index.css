@@ -3,7 +3,6 @@
 body{
     width: 100%;
     height: 100%;
-    margin: 0;
     background-color: #e7bc4452;
 }
 
@@ -15,13 +14,15 @@ header{
     color: #f58300;
     background-color: #ff9d003a;
     box-shadow: 1px 1px 5px #908e8e;
+    box-sizing: border-box;
 }
 
 header h1{
     position: relative;
-    top: 15%;
+    top: 30%;
     text-align: center;
     font-size: 28pt;
+    font-weight: bold;
 }
 
 header h3{
@@ -36,11 +37,28 @@ header h3{
 main{
     width: 100%;
     padding: 20px;
+    box-sizing: border-box;
 }
+
+/*main h2{
+    
+}
+
+main p{
+
+}
+
+main a #GitOficalPage{
+
+}
+
+main span #dica{
+
+}*/
 
 footer{
     width: 100%;
-    height: 280px;
+    height: 300px;
     margin-top: 20px;
     background-color: #afaaaa;
     box-sizing: border-box;
@@ -50,7 +68,7 @@ footer #ft-blocos{
     position: relative;
     width: 90%;
     height: 65%;
-    top: 20px;
+    top: 25px;
     left: 5%;
 }
 
@@ -60,24 +78,29 @@ footer .ft-comentario{
     width: 30%;
     height: 100%;
     margin-left: 2%;
-    padding: 10px;
+    padding: 20px;
+    background-color: #747474;
     border: 2px solid #e0e0e0;
     box-shadow: 1px 1px 3px #505050;
     box-sizing: border-box;
 }
 
+/*footer .ft-comentario h3{
+
+}*/
+
 footer .ft-comentario p{
     font-size: 11pt;
     color: white;
-    letter-spacing: 1px;
+    letter-spacing: 1.3px;
     line-height: 20px;
 }
 
 footer #referencia{
     clear: both;
-    text-align: center;
-    margin: 40px;
     color: #585858;
+    text-align: center;
+    margin: 50px;
 }
 
 footer #referencia a{

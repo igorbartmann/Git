@@ -4,6 +4,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Estudando Git</title>
+        <link rel="stylesheet" type="text/css" href="reset.css"/>
         <link rel="stylesheet" type="text/css" href="index.css"/>
     </head>
     <body>
@@ -13,16 +14,104 @@
         </header>
         <main>
             <h2>Porque utilizar o Git:</h2>
-            <p></p>
-            <img>
+            <p>O <em>Git</em> é uma ferramenta que possibilita criar <em>repositórios de código-fonte e arquivos</em>, visando ter um maior controle das versões.</p>
+            <p>Através do <em>Git</em> é possível guardar todo o histórico de alterações do projeto, assim como voltarmos à versões anteriores. Devido a 
+                esse versionamento, o Git se tornou muito útil para trabalhos em equipe, quando vários programadores trabalham, juntos, sobre um mesmo projeto.
+                Dessa forma é possível que diferentes programadores trabalhem ao mesmo tempo em um único projeto, cada um criando <em>diferentes versões</em> que, no final, 
+                serão unidas em uma única.</p>
+            <img><!--Colocar imagem aqui-->
 
+
+            
             <h2>Como Instalar o Git:</h2>
-            <p></p>
-            <h2>Primeiros Passos com o Git:</h2>
+            <p>Para realizar o <em>download do Git</em>, acesse a página oficial da ferramenta: <a id="GitOficalPage" href="https://git-scm.com/">Clique aqui para ir para a página ofical do Git!</a></p>
+            <p>Na página oficial do Git, terá um espaço destinado apenas ao download. Faça o download para o seu <em>Sistema Operacional</em> e em seguida realize a Instalação <br/>
+                <span id="dica">Para começar a utilizar o Git, você pode manter todas as configurações que já vem previamente estabelecidas na hora de realizar a instalação.</span>
+            </p>
+            <img><!--Colocar imagem aqui-->
+            
 
+
+            <h2>Conceitos Básicos do Git:</h2>
+            <h3>Commit</h3>
+            <p>Commit é como se fosse um "checkpoint" de modificação, ou seja, é um ponto para indicar que naquele momento houve uma modificação no projeto.</p>
+            <p>Normalmente devemos gerar um commit sempre que a nossa base do código tiver uma mudança que consideramos importante. Mas por <em>Boa-Prática</em>, 
+                nunca devemos commitar um código que não funciona</p>
+
+            <h3>Branch</h3>
+            <p>Branch são ramos utilizados para separar o desenvolvimento de diferentes funcionalidades dentro de um projeto.</p>
+            <p>O branch master é o branch “padrão” de um repositório.</p>
+            <p>É interessante separar o desenvolvimento em branches diferentes, para que as mudanças no código de uma, não influencie no funcionamento de outra.</p>
+            
+
+
+            <h2>Primeiros Passos com o Git:</h2>
+            <p>Junto com a instalação do Git, será instalada uma ferramenta muita importante para a sua utilização: O <em>Git Bash</em>.<br/>
+                É através desta ferramenta que nos comunicaremos com o Git, utilizando os comandos pré-estabelecidos.
+            </p>
+            <p>Antes de mais nada, crie um diretório dentro do seu computador e nele, adicione um arquivo qualquer(.html, ou até mesmo .txt).</p>
+            <p>Agora, abra o <em>Git Bash</em> e navegue até este diretório que você acabou de criar. Para isso, utilize os comandos:</p>
+            <ul>
+                <li><em>cd *folderName*</em> - Navegar para o diretório informado.</li>
+                <li><em>cd ..</em> - Para voltar para o diretório anterior.</li>
+            </ul>
+
+            <p>Quando você já estiver dentro do diretório que acabou de criar, digite os seguintes códigos:</p>
+            <ul type="circle">
+                <li><em>git init</em> - Faz do diretório atual, um <em>repositório Git</em>;</li>
+                <li>A primeira configuração a fazer, é indicar "Quem você é" ao Git:</li>
+                <ul>
+                    <li><em>git config user.name "SeuNome"</em> - Configura o seu nome;</li>
+                    <li><em>git config user.email "SeuEmail"</em> - Configura o seu email;</li>
+                </ul>
+                <li><em>git status</em> - Exibe o estado dos arquivos encontrados;</li>
+                <li><em>git add *fileName*</em> - Adiciona o arquivo informado ao monitoramento do Git;</li>
+                <li><em>git commit -m "Mensagem"</em> - Commita o estado atual do branch, dando a este commit a mansagem informada;</li>
+                <li><em>git log</em> - Exibe os commits realizados, como uma espécie de histórico;</li>
+            </ul>
+
+            <p>Note que sempre que você realizar uma modificação no arquivo do repositório (diretório criado por você)e escrever o código
+                 "<em>git status</em>", verá que a versão mais atual do arquivo não estará adicionada ao git, para isso você terá que adicionar a
+                nova versão do arquivo ao Git (<em>git add</em>) e realizar um novo commit (<em>git commit -m "Mensagem"</em>).
+            </p>
+         
+
+            
             <h2>Criando Repositórios com o GitHub:</h2>
-            <p></p>
-            <img>
+            <p>Acesse o site oficial do GitHub (<a href="https://github.com/" target="_blank">Clicando aqui</a>), crie uma conta e faça login.</p>
+            <p>Após isso, clique em "Novo", para adicionar um Novo Repositório. Em seguida configure o repositório, escolhendo, entre outros itens, o nome e a visibilidade do seu repositório.</p>
+            <p>Ao criar o repositório, aparecerá uma página com vários modelos de códigos, mas o mais importante agora, é você copiar a URL/Link da página do seu repositório.</p>
+            <p>Feito isso, volte ao <em>Git Bash</em>, navegue até o diretório criado por você e digite o seguinte código:</p>
+            <ul>
+                <li><em>git remote add servidor *UrlDoSeuRepositórioGitHub*</em> - Com isso você adicionará um novo repositório remoto (chamado "servidor", poderia ser outro nome qualquer) 
+                    para o seu repositório local.
+                </li>
+                <li><em>git remote</em> - Exibe uma lista dos repositórios remotos encontrados para o seu repositporio local (verifique se aparecerá o nome recem adicionado - "servidor").</li>
+                <li><em>git push servidor master</em> - Com isso todos os dados do seu branch (chamado "master") serão enviados ("push") para o seu repositório remoto (chamado "servidor").</li>
+            </ul>
+
+            <p>A partir dai, sempre que você modificar algo no seu projeto atual, adicione a nova versão ao git (git add), faça um novo commit (git commit -m "Mensagem") e 
+                envie os dados atualizados para o repositório remoto - GitHub - (git push servidor master).
+            </p>
+
+            <h4>DICA: Se outra você estiver em outro computador, como trazer os dados do repositório remoto - GitHub - para este outro computador?</h4>
+            <ol type="I">
+                <li>Crie um novo diretório dentro deste computador.</li>
+                <li>Através do Git Bash (se o computador não possuir, precisará ser realizado o download), navegue até o diretório atual.</li>
+                <li>Quando chegar dentro do navegatório recem criado, digite o código <em>git init</em> (para tornar este diretório um repositório git), seguido pelos códigos 
+                    de configurar "Quem você é" (<em>git config user.nome "Seu Nome"</em> e <em>git config user.email "Seu Email"</em>).
+                </li>
+                <li>Após isso, adicione um repositório remoto - GitHub - a este diretório (<em>git remote add servidor *UrlDoSeuRepositórioGitHub*</em>).</li>
+                <li>Para trazer os dados do repositório remoto - GitHub - para dentro do computador, utilize o código <em>git pull servidor master</em>. Com isso todos os dados
+                 do diretório remoto ("servidor") serão puxados ("pull") para dentro do branch atual ("master").</li>
+            </ol>
+            <img><!--Colocar imagem aqui-->
+
+
+            
+            <p>Lembre-se, isto é o básico que você precisa saber para conseguir trabalhar com Git e GitHub.</p>
+            <p><br/>Quer aprender mais?</p>
+            <p>Acesse: <a href="https://www.alura.com.br/curso-online-git-github-controle-de-versao" target="_blank">Curso de Git e GitHub - Alura</a>.</p>
         </main>
         <footer>
             <div id="ft-blocos">
