@@ -10,7 +10,7 @@ body{
 /* Configurações do header - cabeçalho */
 header{
     width: 100%;
-    height: 130px;
+    height: 150px;
     margin-bottom: 20px;
     padding: 10px;
     color: #f58300;
@@ -19,12 +19,19 @@ header{
     box-sizing: border-box;
 }
 
-header h1{
+header img{
+    display: inline-block;
     position: relative;
-    top: 30%;
-    text-align: center;
+    width: 15%;
+    height: 33%;
+    top: 5%;
+}
+
+header h1{
     font-size: 28pt;
+    text-align: center;
     font-weight: bold;
+    text-shadow: 1px 1px 2px black;
 }
 
 header h3{
@@ -32,7 +39,7 @@ header h3{
     font-size: 12pt;
     font-weight: normal;
     text-align: right;
-    margin: 45px 5% 0;
+    margin: 30px 5% 0;
     text-decoration: underline;
 }
 
@@ -51,7 +58,7 @@ main h2{
 }
 
 main .title{
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 main p{
@@ -72,6 +79,22 @@ main .OficialPage:hover{
     color: #926a20;
     font-weight: bold;
     text-decoration: underline;
+}
+
+main figure{
+    margin: 35px 0 60px;
+    text-align: center;
+}
+
+#GitLogo{
+    width: 30%;
+    height: 30%;
+    text-align: center;
+}
+
+#GitPage{
+    width: 50%;
+    height: 50%;
 }
 
 main #dica{
@@ -116,11 +139,9 @@ main ol{
     margin: 0 20px 0 30px;
 }
 
-main #linkAlura{
-    color: #926a20;
-}
-main #linkAlura:hover{
-    font-weight: bold;
+#GitHubLogo{
+    width: 25%;
+    height: 25%;
 }
 
 #extra{
@@ -134,6 +155,13 @@ main #linkAlura:hover{
 
 #extra #fraseFinal{
     margin-top: 20px;
+}
+
+main #linkAlura{
+    color: #926a20;
+}
+main #linkAlura:hover{
+    font-weight: bold;
 }
 
 
